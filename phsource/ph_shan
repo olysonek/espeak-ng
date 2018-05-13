@@ -1,4 +1,38 @@
 //*******************************************************************
+// TONES
+//*******************************************************************
+
+phoneme 1 // rising tone (contour: 24)
+  stress
+  Tone(20, 40, envelope/p_rise, NULL)
+endphoneme
+
+phoneme 2 // low tone (contour: 11)
+  stress
+  Tone(10, 10, envelope/i_risefall, NULL)
+endphoneme
+
+phoneme 3 // mid(-falling) tone (contour: 32)
+  stress
+  Tone(30, 20, envelope/p_fall, NULL)
+endphoneme
+
+phoneme 4 // high tone (contour: 55)
+  stress
+  Tone(50, 50, envelope/i_risefall, NULL)
+endphoneme
+
+phoneme 5 // falling (creaky) tone (contour: 42)
+  stress
+  Tone(40, 20, envelope/p_fall, NULL)
+endphoneme
+
+phoneme 6 // emphatic (contour: 343)
+  stress
+  Tone(30, 40, envelope/i_risefall, NULL)
+endphoneme
+
+//*******************************************************************
 // CONSONANTS (PLOSIVES/STOPS)
 //*******************************************************************
 
