@@ -168,8 +168,110 @@ endphoneme
 phoneme O
   vwl starttype #o endtype #o
   length 260
+  ipa ɔ
 
   FMT(vwl_it/o_open)
-  //FMT(vowel/oo_en)
+endphoneme
+
+//*******************************************************************
+// DIPHTHONGS
+//*******************************************************************
+
+phoneme iu
+  vwl starttype #i endtype #u
+  length 200
+
+  FMT(vdiph2/iu)
+endphoneme
+
+phoneme eu
+  vwl starttype #e endtype #u
+  length 200
+
+  FMT(vdiph/eu)
+endphoneme
+
+phoneme Eu
+  vwl starttype #e endtype #u
+  length 200
+  ipa ɛu
+
+  FMT(vdiph/eeu)
+endphoneme
+
+phoneme au
+  vwl starttype #a endtype #u
+  length 200
+
+  FMT(vdiph/au_2)
+endphoneme
+
+phoneme a:u
+  vwl starttype #a endtype #u
+  length 250
+  ipa aːu
+
+  FMT(vdiph/au_2)
+endphoneme
+
+phoneme Wi
+  vwl starttype #i endtype #i
+  length 200
+  ipa ɯi
+
+  FMT(vdiph/ui_3)
+endphoneme
+
+phoneme ui
+  vwl starttype #u endtype #i
+  length 200
+
+  FMT(vdiph/ui)
+endphoneme
+
+phoneme @i
+  vwl starttype #@ endtype #i
+  length 200
+  ipa əi
+
+  FMT(vdiph/@i)
+endphoneme
+
+phoneme oi
+  vwl starttype #o endtype #i
+  length 200
+
+  FMT(vdiph/ooi)
+endphoneme
+
+phoneme ai
+  vwl starttype #a endtype #i
+  length 200
+
+  FMT(vdiph/ai)
+endphoneme
+
+phoneme a:i
+  vwl starttype #a endtype #i
+  length 250
+  ipa aːi
+
+  FMT(vdiph/ai)
+endphoneme
+
+phoneme Oi
+  vwl starttype #o endtype #i
+  length 200
+  ipa ɔi
+
+  FMT(vdiph/ooi_3)
+endphoneme
+
+phoneme aW
+  vwl starttype #a endtype #u
+  length 200
+  ipa aɯ
+
+  FMT(vdiph/aau_4)
 endphoneme
 
