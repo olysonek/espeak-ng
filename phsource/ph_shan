@@ -60,3 +60,82 @@ phoneme k_h
   WAV(ustop/k_asp)
 endphoneme
 
+//*******************************************************************
+// VOWELS
+//*******************************************************************
+
+phoneme i
+  vwl starttype #i endtype #i
+  length 200
+
+  FMT(vowel/i)
+endphoneme
+
+phoneme i.
+  vwl starttype #i endtype #i
+  length 200
+  ipa ɨ
+
+  FMT(vowel/i#_6)
+endphoneme
+
+phoneme u
+  vwl starttype #u endtype #u
+  length 200
+
+  FMT(vowel/u_bck)
+endphoneme
+
+phoneme e
+  vwl starttype #e endtype #e
+  length 200
+
+  FMT(vowel/e_2)
+endphoneme
+
+phoneme @
+  vwl starttype #@ endtype #@
+  length 200
+  ipa ə
+
+  FMT(vowel/3_2)
+endphoneme
+
+phoneme o
+  vwl starttype #o endtype #o
+  length 220
+
+  FMT(vowel/o)
+endphoneme
+
+phoneme E
+  vwl starttype #e endtype #e
+  length 200
+  ipa ɛ
+
+  FMT(vowel/ee_2)
+endphoneme
+
+phoneme a
+  vwl starttype #a endtype #a
+  length 200
+
+  FMT(vowel/a)
+endphoneme
+
+phoneme a:
+  vwl starttype #a endtype #a
+  length 250
+  ipa aː
+
+  FMT(vowel/a)
+endphoneme
+
+phoneme O
+  vwl starttype #o endtype #o
+  length 260
+
+  FMT(vwl_it/o_open)
+  //FMT(vowel/oo_en)
+endphoneme
+
