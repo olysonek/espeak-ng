@@ -76,14 +76,14 @@ distclean-local:
 
 ##### custom rules:
 
-SUFFIXES=.html .md .ronn
+SUFFIXES=.html .md
 
 .md.html: _layouts/webpage.html
-	cat $< | sed -e 's/\.md)/.html)/g' -e 's/\.ronn/.html/g' | \
+	cat $< | sed -e 's/\.md)/.html)/g' | \
 		kramdown --template _layouts/webpage.html > $@
 
-.ronn.html:
-	ronn --html $<
+.md.html:
+	kramdown --template _layouts/webpage.html -i kramdown -o html $< > $@
 
 ##### vim:
 
@@ -101,11 +101,11 @@ EXTRA_DIST += $(vim_addons_syntax_DATA)
 
 ##### documentation:
 
-src/espeak-ng.1: src/espeak-ng.1.ronn
-	ronn --roff $<
+src/espeak-ng.1: src/espeak-ng.1.md
+	kramdown -i kramdown -o man $< > $@
 
-src/speak-ng.1: src/speak-ng.1.ronn
-	ronn --roff $<
+src/speak-ng.1: src/speak-ng.1.md
+	kramdown -i kramdown -o man $< > $@
 
 docs:	docs/index.html \
 	docs/add_language.html \
@@ -195,9 +195,7 @@ endif
 
 bin_PROGRAMS += src/speak-ng
 
-if HAVE_RONN
 man1_MANS += src/speak-ng.1
-endif
 
 src_speak_ng_LDADD   = src/libespeak-ng.la
 src_speak_ng_LDFLAGS = -static -lm ${PCAUDIOLIB_LIBS}
@@ -206,9 +204,7 @@ src_speak_ng_SOURCES = src/speak-ng.c
 
 bin_PROGRAMS += src/espeak-ng
 
-if HAVE_RONN
 man1_MANS += src/espeak-ng.1
-endif
 
 src_espeak_ng_LDADD   = src/libespeak-ng.la ${PCAUDIOLIB_LIBS}
 src_espeak_ng_SOURCES = src/espeak-ng.c

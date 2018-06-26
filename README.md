@@ -108,7 +108,6 @@ Optionally, you need:
     to enable audio output;
 3.  the [sonic](https://github.com/espeak-ng/sonic) development library to
     enable sonic audio speed up support;
-4.  the `ronn` man-page markdown processor to build the man pages.
 
 To build the documentation, you need:
 
@@ -122,7 +121,6 @@ be installed using the following commands:
 | autotools     | `sudo apt-get install make autoconf automake libtool pkg-config` |
 | c99 compiler  | `sudo apt-get install gcc`                                       |
 | sonic         | `sudo apt-get install libsonic-dev`                              |
-| ronn          | `sudo apt-get install ruby-ronn`                                 |
 | kramdown      | `sudo apt-get install ruby-kramdown`                             |
 
 ### Building
@@ -326,7 +324,7 @@ To enable eSpeak, you need to:
 The [main documentation](docs/index.md) for eSpeak NG provides more information
 on using and creating voices/languages for eSpeak NG.
 
-The [espeak-ng](src/espeak-ng.1.ronn) and [speak-ng](src/speak-ng.1.ronn)
+The [espeak-ng](src/espeak-ng.1.md) and [speak-ng](src/speak-ng.1.md)
 command-line documentation provide a reference of the different command-line
 options available to these commands with example usage.
 
