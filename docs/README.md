@@ -3,8 +3,8 @@
 - [Features](#features)
 - [History](#history)
 - User Guide
-  - [espeak-ng Command Line](../src/espeak-ng.1.ronn)
-  - [speak-ng Command Line](../src/speak-ng.1.ronn)
+  - [espeak-ng Command Line](../src/espeak-ng.1.adoc)
+  - [speak-ng Command Line](../src/speak-ng.1.adoc)
   - [Supported Languages](languages.md)
   - [SSML and HTML Support](markup.md)
 - Creating and Editing Languages and Voices

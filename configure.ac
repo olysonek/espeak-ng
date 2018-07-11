@@ -250,12 +250,12 @@ AM_CONDITIONAL(OPT_MBROLA, [test x"$have_mbrola" = xyes])
 AM_CONDITIONAL(OPT_ASYNC,  [test x"$have_async"  = xyes])
 
 dnl ================================================================
-dnl ronn checks.
+dnl asciidoc checks.
 dnl ================================================================
 
-AC_CHECK_PROG(RONN, ronn, ronn, no)
+AC_CHECK_PROG(ASCIIDOC, a2x, a2x, no)
 
-AM_CONDITIONAL(HAVE_RONN, [test ! x"$RONN" = xno])
+AM_CONDITIONAL(HAVE_ASCIIDOC, [test ! x"$ASCIIDOC" = xno])
 
 dnl ================================================================
 dnl Extended dictionary checks.

@@ -74,15 +74,15 @@ distclean-local:
 
 ##### custom rules:
 
-SUFFIXES=.html .md .ronn .check .test
+SUFFIXES=.html .md .check .test
 
 .md.html: _layouts/webpage.html
 	@echo "  MD        $@"
-	@cat $< | sed -e 's/\.md)/.html)/g' -e 's/\.ronn/.html/g' | \
+	@cat $< | sed -e 's/\.md)/.html)/g' -e 's/\.adoc/.html/g' | \
 		kramdown --template _layouts/webpage.html > $@
 
-.ronn.html:
-	ronn --html $<
+.adoc.html:
+	a2x -f xhtml $<
 
 ##### vim:
 
@@ -100,11 +100,11 @@ EXTRA_DIST += $(vim_addons_syntax_DATA)
 
 ##### documentation:
 
-src/espeak-ng.1: src/espeak-ng.1.ronn
-	ronn --roff $<
+src/espeak-ng.1: src/espeak-ng.1.adoc
+	a2x -f manpage $<
 
-src/speak-ng.1: src/speak-ng.1.ronn
-	ronn --roff $<
+src/speak-ng.1: src/speak-ng.1.adoc
+	a2x -f manpage $<
 
 docs_MARKDOWN != ls docs/*.md docs/*/*.md docs/*/*/*.md
 docs_HTML = ${docs_MARKDOWN:.md=.html}
@@ -190,7 +190,7 @@ endif
 
 bin_PROGRAMS += src/speak-ng
 
-if HAVE_RONN
+if HAVE_ASCIIDOC
 man1_MANS += src/speak-ng.1
 endif
 
@@ -201,7 +201,7 @@ src_speak_ng_SOURCES = src/speak-ng.c
 
 bin_PROGRAMS += src/espeak-ng
 
-if HAVE_RONN
+if HAVE_ASCIIDOC
 man1_MANS += src/espeak-ng.1
 endif
 
